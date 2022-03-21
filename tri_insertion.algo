@@ -1,0 +1,17 @@
+ALGORITHM tri_insertion
+VAR
+    tab: ARRAY_OF INTEGER[];
+    i,j,k:INTEGER;
+BEGIN
+    j:2;
+    WHILE (j<length.tab) DO
+        i=j-1;
+        k=tab[j];
+        WHILE (i>0 , tab[i]>k) DO
+            tab[i+1]=tab[i];
+            i=i-1;
+        END_WHILE
+        tab[i+1]=k;
+        j=j+1;
+    END_WHILE
+END
